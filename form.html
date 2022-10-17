@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Style/form.css">
+        	<title>On boarding form</title>
+    	</head>
+    	<body>
+        	<div>
+            		<form class="form">
+                		<div class="heading">
+					<h1>On boarding form</h1>
+				</div>
+				<div>
+					<h3>Personal details:</h3>
+				</div>
+				<div>
+                			<label for="fname">Full name:</label>
+  					<input type="text" id="fname" name="fname" required>
+					<small>Error message</small>
+				</div>
+				<div>
+                			<label for="email">E mail:</label>
+                			<input type="email" name="email" id="email" required>
+				</div>
+				<div>
+					<label for="phone">Phone number:</label>
+  					<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}" required>
+				</div>
+				<div>
+  					<label for="password">Password for job account:</label>
+  					<input type="password" id="password" name="password" required>
+				</div>
+				<div>
+					<label for="birthdaytime">Birthday (date and time):</label>
+  					<input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
+				</div>
+				<div>
+					<input type="hidden" id="employeeid" name="employeeid" value="1234" required>
+				</div>
+				<div>
+					<label for="state">State</label>
+					<select name="state" id="state">
+                				<option value="Kerala">Kerala</option>
+                				<option value="Tamilnad">Tamilnad</option>
+                				<option value="Karnataka">Karnataka</option>
+                			</select>
+				</div>
+				<div>
+					<h3>Address</h3>
+                			<label for="address">Address</label>
+                			<textarea name="address" id="address" cols="30" rows="10"></textarea>
+				</div>
+				<div>
+                			<h4>Gender</h4>
+				</div>
+				<div>
+                			<input type="radio" name="gender" id="male" required>
+                			<label for="male">Male</label>
+                			<input type="radio" name="gender" id="female" required>
+                			<label for="female">Female</label>
+                			<input type="radio" name="gender" id="other" required>
+                			<label for="other">Other</label>
+				</div>
+				<div>
+                			<h3>Hobbies and interests:</h3>
+				</div>
+				<div>
+					<h4>Games</h4>
+				</div>
+				<div>
+                			<input type="checkbox" name="games" id="football">
+                			<label for="football">Football</label>
+				</div>
+				<div>
+                			<input type="checkbox" name="games" id="cricket">
+                			<label for="cricket">Cricket</label>
+				</div>
+				<div>
+                			<input type="checkbox" name="games" id="badminton">
+               				<label for="badminton">Badminton</label>
+				</div>
+				<div>
+					<input type="checkbox" name="games" id="hockey">
+                			<label for="hockey">Hockey</label>
+				</div>
+				<div>
+                			<input type="checkbox" name="games" id="Chess">
+                			<label for="chess">Chess</label>
+				</div>
+				<div>
+                			<input type="checkbox" name="games" id="Others">
+               				<label for="others">Others</label>
+				</div>
+				<div>
+					<label for="favcolor">Select your favorite color:</label>
+  					<input type="color" id="favcolor" name="favcolor" required>
+				</div>
+				<div>
+                			<h3>Joining details:</h3>
+				</div>
+				<div>
+					<label for="joindate">Joining date:</label>
+  					<input type="date" id="joindate" name="joindate" required>
+				</div>
+				<div>
+					<label for="joinmonth">Joining (month and year):</label>
+  					<input type="month" id="joinmonth" name="joinmonth" required>
+				</div>
+				<div>
+					<label for="joinweek">Joining week:</label>
+  					<input type="week" id="joinweek" name="joinweek" required>
+				</div>
+				<div>
+					<label for="appt">Joining time:</label>
+  					<input type="time" id="jointime" name="jointime" required>
+				</div>
+				<div>
+					<h3>Know you more:</h3>
+				</div>
+				<div>
+					<label for="quantity">How many interviews you have attended:</label>
+  					<input type="number" id="quantity" name="quantity" min="0" max="50" required>
+				</div>
+				<div>
+					<label for="vol">Rate your programming ability (between 0 and 10):</label>
+  					<input type="range" id="vol" name="vol" min="0" max="10" required>
+				</div>
+				<div>
+					<label for="gsearch">What are you searched about our company:</label>
+  					<input type="search" id="gsearch" name="gsearch" required>
+				</div>
+				<div>
+					<label for="homepage">Add your homepage:</label>
+  					<input type="url" id="homepage" name="homepage" required>
+				</div>
+				<div>
+                			<h3>Cerificates:</h3>
+				</div>
+				<div>
+                			<label for="photo">Upload your highest qualified certificte or experience certificate:</label>
+                			<input type="file" name="photo" id="photo" required>
+				</div>
+				<div>
+					<h3>Click on the below image to verify you are a human:</h3>
+				</div>
+				<div>
+                			<input type="image" src="Assets/techversant.png" alt="Submit" width="48" height="48">
+				</div>
+				<div>
+					<input type="button" value="Clear">
+                			<input type="submit" value="Submit">
+  					<input type="reset">
+				</div>
+            		</form>
+        	</div>
+		<script src="Javascript/form.js"></script>
+    	</body>
+</html>

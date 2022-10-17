@@ -1,0 +1,18 @@
+body{
+	background-color: #cb98f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form{
+	background-color: #f7f2fa;
+	border: 1px solid #080000;
+	border-radius: 5px;
+	box-shadow: 1px 2px #8f0cfa;
+	padding: 10px;
+	width: 300px;
+}
+h1{
+	color: #8f0cfa;
+	text-align: center;
+}
