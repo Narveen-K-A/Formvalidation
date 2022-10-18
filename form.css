@@ -1,18 +1,66 @@
 body{
-	background-color: #cb98f5;
+	background-image:url(../Assets/background.png);
+	background-repeat: round;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .form{
+	border: 1px solid #000000;
+	disply: flex;
+	align-items: center;
 	background-color: #f7f2fa;
-	border: 1px solid #080000;
 	border-radius: 5px;
-	box-shadow: 1px 2px #8f0cfa;
 	padding: 10px;
-	width: 300px;
+	width: 500px;
 }
 h1{
-	color: #8f0cfa;
+	color: #000000;
 	text-align: center;
+}
+.formcontrol{
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+}
+.formcontrol label{
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.formcontrol input{
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display-block;
+	padding: 10px;
+	font-size: 14px;
+	font-family: inherit;
+}
+.formcontrol small{
+	visibility: hidden;
+}
+.display{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+.button{
+	padding: 10px 15px;
+	border: none;
+	background-color: #464746;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 10px;
+}
+.button:hover{
+	background-color: #000000;
+}
+.width{
+	width: 498px;
+	padding: 10px;
+}
+.height{
+	height: 50px;
+}
+.formwidth{
+	width: 475px;
 }
