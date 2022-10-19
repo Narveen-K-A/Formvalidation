@@ -4,11 +4,12 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="Style/form.css">
+                <script src="Javascript/form.js"></script>             
         	<title>On boarding form</title>
     	</head>
     	<body>
         	<div class="container">
-            		<form class="form" id="form" name="form">
+            		<form class="form" id="form" name="form" onsubmit="return validateform()">
 				<div class="heading">
 					<h1>On boarding form</h1>
 				</div>
@@ -18,54 +19,58 @@
 				<div class="formcontrol">
                 			<label for="fname">Full name:</label>
   					<input class="formwidth" type="text" id="fname" name="fname">
-					<small>Error message</small>
+					<small class="message" id="error1">Please enter a name!</small>
 				</div>
 				<div class="formcontrol">
                 			<label for="email">E mail:</label>
                 			<input class="formwidth" type="email" name="email" id="email">
-					<small>Error message</small>
+					<small class="message" id="error2">Invalid mail address!</small>
 				</div>
 				<div class="formcontrol">
 					<label for="phone">Phone number:</label>
   					<input class="formwidth" type="tel" id="phone" name="phone">
-					<small>Error message</small>
+					<small class="message" id="error3">Invalid phone number!</small>
 				</div>
 				<div class="formcontrol">
   					<label for="password">Password for job account:</label>
   					<input class="formwidth" type="password" id="password" name="password">
-					<small>Error message</small>
+					<small class="message" id="error4">Invalid password!</small>
 				</div>
 				<div class="formcontrol">
 					<label for="birthdaytime">Birthday (date and time):</label>
   					<input class="formwidth" type="datetime-local" id="birthdaytime" name="birthdaytime">
-					<small>Error message</small>
+					<small class="message" id="error5">Please enter the date and time!</small>
 				</div>
 				<div class="formcontrol">
 					<label for="state">State: </label>
 					<select class="width" name="state" id="state">
+						<option value=""></option>
                 				<option value="Kerala">Kerala</option>
                 				<option value="Tamilnad">Tamilnad</option>
                 				<option value="Karnataka">Karnataka</option>
+						<option value="Andhrapradhesh">Andhra pradhesh</option>
                 			</select>
-					<small>Error message</small>
+					<small class="message" id="error6">Please enter your state!</small>
 				</div>
 				<div class="formcontrol">
 					<div>Address:</div>
                 			<label for="address"></label>
                 			<textarea name="address" id="address" cols="65" rows="10"></textarea>
-					<small>Error message</small>
+					<small class="message" id="error7">Please enter an address!</small>
 				</div>
 				<div class="formcontrol">
 					<div class="formcontrol">
 						Gender:
 					</div>
-                			<input type="radio" name="gender" id="male">
-                			<label for="male">Male</label>
-                			<input type="radio" name="gender" id="female">
-                			<label for="female">Female</label>
-                			<input type="radio" name="gender" id="other">
-                			<label for="other">Other</label>
-					<small>Error message</small>
+					<div>
+                				<input type="radio" name="gender" id="male">
+                				<label for="male">Male</label>
+                				<input type="radio" name="gender" id="female">
+                				<label for="female">Female</label>
+                				<input type="radio" name="gender" id="other">
+                				<label for="other">Other</label>
+					</div>
+					<small class="message" id="error8">Please select any option!</small>
 				</div>
 				<div>
                 			<h3>Joining details:</h3>
@@ -73,22 +78,22 @@
 				<div class="formcontrol">
 					<label for="curdate">Current date:</label>
   					<input class="formwidth" type="date" id="curdate" name="curdate">
-					<small>Error message</small>
+					<small class="message" id="error9">Please enter the current date!</small>
 				</div>
 				<div class="formcontrol">
 					<label for="joinmonth">Joining (month and year):</label>
   					<input class="formwidth" type="month" id="joinmonth" name="joinmonth">
-					<small>Error message</small>
+					<small class="message" id="error10">Please enter the joining month and year!</small>
 				</div>
 				<div class="formcontrol">
 					<label for="joinweek">Joining week:</label>
   					<input class="formwidth" type="week" id="joinweek" name="joinweek">
-					<small>Error message</small>
+					<small class="message" id="error11">Please enter the joining week!</small>
 				</div>
 				<div class="formcontrol">
-					<label for="appt">Joining time:</label>
+					<label for="jointime">Joining time:</label>
   					<input class="formwidth" type="time" id="jointime" name="jointime">
-					<small>Error message</small>
+					<small class="message" id="error12">Please enter the joining week!</small>
 				</div>
 				<div>
 					<h3>Know you more:</h3>
@@ -117,40 +122,37 @@
                 				<input type="checkbox" name="program" id="Others">
                					<label for="others">Others</label>
 					</div>
-					<small>Error message</small>
 				</div>
 				<div class="formcontrol">
 					<label for="quantity">How many programming languages you know:</label>
   					<input class="formwidth" type="number" id="quantity" name="quantity">
-					<small>Error message</small>
+					<small class="message" id="error13">Please enter a number!</small>
 				</div>
 				<div class="formcontrol">
 					<label for="favcolor">Select your favorite color:</label>
   					<input class="height width" type="color" id="favcolor" name="favcolor">
-					<small>Error message</small>
 				</div>
 				<div class="formcontrol">
 					<label for="vol">Rate your programming ability (between 0 and 10):</label>
   					<input class="formwidth" type="range" id="vol" name="vol" min="0" max="10">
-					<small>Error message</small>
 				</div>
 				<div class="formcontrol">
 					<label for="gsearch">What are you searched about our company:</label>
   					<input class="width" type="search" id="gsearch" name="gsearch">
-					<small>Error message</small>
+					<small class="message" id="error14">Plese enter something that you have searched about our company!</small>
 				</div>
 				<div class="formcontrol">
 					<label for="homepage">Add your homepage:</label>
   					<input class="formwidth" type="url" id="homepage" name="homepage">
-					<small>Error message</small>
+					<small class="message" id="error15">Please add your homepage URL!</small>
 				</div>
 				<div>
                 			<h3>Cerificates:</h3>
 				</div>
 				<div class="formcontrol">
-                			<label for="photo">Upload your highest qualification certificte or experience certificate:</label>
-                			<input class="formwidth" type="file" name="photo" id="photo">
-					<small>Error message</small>
+                			<label for="file">Upload your highest qualification certificte or experience certificate:</label>
+                			<input class="formwidth" type="file" name="file" id="file">
+					<small class="message" id="error16">Please select a file from your device!</small>
 				</div>
 				<div class="display">
                 			<input class="button" type="submit" value="Submit">
@@ -158,6 +160,5 @@
 				</div>
             		</form>
         	</div>
-		<script src="Javascript/form.js"></script>
     	</body>
 </html>
