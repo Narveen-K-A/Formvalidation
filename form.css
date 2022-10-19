@@ -7,6 +7,7 @@ body{
 }
 .form{
 	border: 1px solid #000000;
+	box-shadow: 0px 2px 10px 0px;
 	disply: flex;
 	align-items: center;
 	background-color: #f7f2fa;
@@ -20,7 +21,6 @@ h1{
 }
 .formcontrol{
 	margin-bottom: 10px;
-	padding-bottom: 20px;
 }
 .formcontrol label{
 	display: inline-block;
@@ -33,9 +33,6 @@ h1{
 	padding: 10px;
 	font-size: 14px;
 	font-family: inherit;
-}
-.formcontrol small{
-	visibility: hidden;
 }
 .display{
 	display: flex;
@@ -63,4 +60,13 @@ h1{
 }
 .formwidth{
 	width: 475px;
+}
+
+.message{
+	color: red;
+	visibility: hidden;
+}
+#address,#state{
+	border: none;
+	border-radius: 5px;
 }
